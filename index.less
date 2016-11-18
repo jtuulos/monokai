@@ -86,7 +86,10 @@ atom-text-editor, :host {
 }
 
 .comment {
-  color: @brown;
+  &, .storage.type {
+    font-style: italic;
+    color: @brown;
+  }
 }
 
 .constant {
@@ -121,7 +124,6 @@ atom-text-editor, :host {
   }
 
   &.other.inherited-class {
-    font-style: italic;
     text-decoration: none;
     color: @green;
   }
@@ -148,7 +150,6 @@ atom-text-editor, :host {
   color: @pink;
 
   &.type {
-    font-style: italic;
     color: @blue;
   }
 }
@@ -165,14 +166,12 @@ atom-text-editor, :host {
 
   &.class,
   &.type {
-    font-style: italic;
     color: @blue;
   }
 }
 
 .variable {
   &.parameter {
-    font-style: italic;
     color: @orange;
   }
 
